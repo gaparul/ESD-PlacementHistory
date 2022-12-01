@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/Academia?createDatabaseIfNotExist=true&amp;useSSL=false</property>
+        <property name="connection.username">parul</property>
+        <property name="connection.password">Parul@191210</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <!-- DB schema will be updated if needed -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <mapping class="com.academia.placementhistory.Bean.Placement"/>
+        <mapping class="com.academia.placementhistory.Bean.Student"/>
+        <mapping class="com.academia.placementhistory.Bean.Employee"/>
+        <mapping class="com.academia.placementhistory.Bean.PlacementStudent"/>
+        <mapping class="com.academia.placementhistory.Bean.PlacementFilter"/>
+        <mapping class="com.academia.placementhistory.Bean.Alumni"/>
+        <mapping class="com.academia.placementhistory.Bean.AlumniOrganisation"/>
+        <mapping class="com.academia.placementhistory.Bean.Organisation"/>
+    </session-factory>
+</hibernate-configuration>
